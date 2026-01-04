@@ -1046,7 +1046,7 @@
         type: "donut",
       },
       labels: ["Coin Price", "Hard Cap", "Token Sale", "Token"],
-      colors: ["#33BB51", "#F3B123", "#82A412", "#C6E757"],
+      colors: ["#33BB51", "#F3B123", "#82A412", "#f3c054"],
       dataLabels: {
         enabled: false,
       },
@@ -1079,7 +1079,7 @@
         type: "donut",
       },
       labels: ["Advisors", "Founders", "Reserved", "Distributed"],
-      colors: ["#33BB51", "#F3B123", "#82A412", "#C6E757"],
+      colors: ["#33BB51", "#F3B123", "#82A412", "#f3c054"],
       dataLabels: {
         enabled: false,
       },
