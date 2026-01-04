@@ -1,0 +1,115 @@
+/* ==== 
+ --------- (5.07) offer styles start ---------
+ ==== */
+
+.offer {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  .offer__content-single {
+    padding: 20px;
+    border: 2px dashed #616161;
+    backdrop-filter: blur(50.5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: var(--transition);
+    background-color: #161513;
+    margin-bottom: 25px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+
+    h6 {
+      font-weight: 700;
+      font-family: var(--gorditas);
+      transition: all 0.3s ease-in;
+      max-width: 400px;
+    }
+
+    &:hover {
+      background: #00c288;
+      border-color: #61616150;
+
+      h6 {
+        color: var(--septenary-color);
+      }
+
+      .thumb {
+        img {
+          transform: rotate(33deg);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .offer__content-single-active {
+    background: #00c288;
+    border-color: #61616150;
+
+    h6 {
+      color: var(--septenary-color);
+    }
+
+    .thumb {
+      img {
+        transform: rotate(33deg);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .offer__thumb {
+    img {
+      animation: moveLeftRight 10s linear infinite;
+    }
+  }
+
+  .thumb {
+    min-width: 70px;
+
+    img {
+      transform: rotate(0deg);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+  }
+
+  .left-img {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: -100px;
+
+    img {
+      max-width: 15vw;
+      min-width: 50px;
+      animation: moveTopBottom 8s linear infinite;
+    }
+  }
+
+  .right-img {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 100px;
+
+    img {
+      max-width: 15vw;
+      min-width: 50px;
+      animation: moveTopBottom 12s linear infinite;
+      animation-delay: 2s;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.07) offer styles end ---------
+ ==== */

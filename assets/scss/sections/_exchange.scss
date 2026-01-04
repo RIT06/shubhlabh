@@ -1,0 +1,244 @@
+/* ==== 
+ --------- (5.12) exchange styles start ---------
+ ==== */
+
+.exchange {
+  background: linear-gradient(180deg, #f5f4f9 0%, #ccfff3 100%);
+
+  .exchange__single-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 0px 5px 5px 0px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: calc(100% - 5px);
+      height: calc(100% - 5px);
+      background-color: var(--black);
+      z-index: -1;
+      border-radius: 8px;
+    }
+  }
+
+  .exchange__single {
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 8px;
+    border: 1.5px solid #000;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
+
+// exchange two
+.exchange-two {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .apexcharts-toolbar {
+    display: none;
+  }
+
+  .apexcharts-gridline {
+    stroke: #ffffff30 !important;
+  }
+
+  .apexcharts-grid-borders {
+    display: none;
+  }
+
+  .apexcharts-text tspan {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff50;
+  }
+
+  .apexcharts-tooltip-z-group,
+  .apexcharts-tooltips-goal-group {
+    display: none;
+  }
+
+  .exchange-two__intro {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ffffff30;
+
+    button {
+      flex-grow: 1;
+      justify-content: space-between;
+      justify-content: center;
+      flex-grow: 1;
+      padding-bottom: 12px;
+      color: #ffffff50;
+      border-bottom: 2px solid transparent;
+    }
+
+    .active {
+      color: var(--white);
+      border-bottom: 2px solid var(--white);
+    }
+  }
+
+  .exchange-two__content {
+    padding: 60px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #181a20;
+  }
+
+  .exchange__item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+
+    .exchange__item {
+      min-width: 150px;
+    }
+  }
+
+  .text-negative {
+    color: #ff3535;
+  }
+
+  .text-positive {
+    color: #58b10a;
+  }
+
+  .left-top-img {
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    z-index: -1;
+
+    img {
+      animation: moveLeftRight 10s linear infinite;
+      max-width: 8vw;
+      min-width: 30px;
+    }
+  }
+}
+
+// exchange three
+.exchange-three {
+  table {
+    width: 100%;
+    min-width: 1200px;
+  }
+
+  .exchange-table {
+    overflow-x: auto;
+  }
+
+  tr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:nth-of-type(odd) {
+      background: rgba(255, 255, 255, 0.04);
+    }
+  }
+
+  th {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: var(--gorditas);
+    font-weight: 700;
+
+    &:nth-of-type(1) {
+      width: 20%;
+    }
+
+    &:nth-last-of-type(1) {
+      text-align: end;
+    }
+  }
+
+  tr {
+    padding: 20px 20px;
+  }
+
+  .exchange-currency {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  td {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--inter);
+
+    &:nth-last-of-type(1) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+
+      a {
+        font-size: 14px;
+        font-weight: 700;
+        font-family: var(--inter);
+
+        &:hover {
+          color: var(--primary-color);
+        }
+
+        &:nth-of-type(1) {
+          background-color: #3b3933;
+          padding: 8px 20px;
+          border-radius: 50px;
+
+          &:hover {
+            background-color: var(--primary-color);
+            color: var(--black);
+          }
+        }
+      }
+    }
+  }
+
+  th,
+  td {
+    width: 14%;
+  }
+
+  .exchange-currency {
+    width: 20%;
+  }
+}
+
+/* ==== 
+ --------- (5.12) exchange styles end ---------
+ ==== */

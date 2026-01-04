@@ -1,0 +1,45 @@
+/* ==== 
+ --------- (5.25) payment methods styles start ---------
+ ==== */
+
+.payment-methods {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  h6 {
+    letter-spacing: 2.25px;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  .payment-method__single {
+    width: 200px;
+    height: 90px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e0a19;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    filter: drop-shadow(0px 24px 16px rgba(16, 23, 54, 0.03));
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  .payment-method__slider-rtl {
+    direction: rtl;
+  }
+}
+
+/* ==== 
+ --------- (5.25) payment methods styles end ---------
+ ==== */

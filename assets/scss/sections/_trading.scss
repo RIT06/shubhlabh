@@ -1,0 +1,76 @@
+/* ==== 
+ --------- (5.13) trading styles start ---------
+ ==== */
+
+.trading {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0px;
+    bottom: 0px;
+    height: 50%;
+    min-height: 560px;
+    background: linear-gradient(180deg, #fffced 0%, #f8ebae 100%);
+    z-index: -1;
+  }
+
+  .top-left-img {
+    position: absolute;
+    top: 55%;
+    left: 0px;
+    z-index: -1;
+
+    img {
+      max-width: 11vw;
+      min-width: 50px;
+      animation: moveTopBottom 6s linear infinite;
+    }
+  }
+
+  .bottom-left-img {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    z-index: -1;
+
+    img {
+      max-width: 6vw;
+      min-width: 50px;
+      animation: rotation 9s linear infinite;
+    }
+  }
+
+  .top-right-img {
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    z-index: -1;
+
+    img {
+      max-width: 7vw;
+      min-width: 50px;
+      animation: moveTopBottom 6s linear infinite;
+      animation-delay: 2s;
+    }
+  }
+
+  .bottom-right-img {
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+    z-index: -1;
+
+    img {
+      max-width: 7vw;
+      min-width: 50px;
+      animation: pulse 9s linear infinite;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.13) trading styles end ---------
+ ==== */

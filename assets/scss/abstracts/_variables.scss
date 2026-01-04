@@ -1,0 +1,40 @@
+/* ==== 
+ --------- (1.02) variables start ---------
+ ==== */
+
+//  google fonts
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Gorditas:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap");
+
+:root {
+  // font family
+  --inter: "Inter", sans-serif;
+  --dynapuff: "DynaPuff", system-ui;
+  --oswald: "Oswald", sans-serif;
+  --gorditas: "Gorditas", serif;
+
+  // template default
+  --template-font: var(--oswald);
+  --template-bg: #161513;
+  --template-color: #ffffff;
+
+  // colors
+  --white: #ffffff;
+  --black: #000000;
+  --primary-color: #c6e757;
+  --secondary-color: #00c288;
+  --tertiary-color: #57e7e6;
+  --quaternary-color: #8ce757;
+  --quinary-color: #fd8e01;
+  --senary-color: #f5b326;
+  --septenary-color: #1d1c1a;
+
+  // transitions
+  --transition: all 0.3s ease;
+
+  // box shadow
+  --shadow: 0px 4px 27px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* ==== 
+ --------- (1.02) variables end ---------
+ ==== */

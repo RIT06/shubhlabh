@@ -1,0 +1,111 @@
+/* ==== 
+ --------- (5.11) way styles start ---------
+ ==== */
+
+.way {
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+
+  .way-img {
+    position: absolute;
+    bottom: -10px;
+    right: 60px;
+    z-index: -1;
+
+    img {
+      animation: moveLeftRight 10s linear infinite;
+      max-width: 13vw;
+      min-width: 100px;
+    }
+  }
+
+  .way__inner {
+    padding-inline: 20px;
+    border-radius: 16px;
+    background: #181a20;
+    position: relative;
+    z-index: 1;
+  }
+
+  .content {
+    max-width: 600px;
+    text-align: center;
+    margin-inline: auto;
+
+    h4 {
+      max-width: 400px;
+      margin-inline: auto;
+    }
+  }
+
+  .way__alter {
+    .content {
+      max-width: 650px;
+
+      h4 {
+        max-width: 700px;
+      }
+    }
+  }
+
+  .way__methods {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .way__methods-single {
+    img {
+      border-radius: 8px;
+      box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(20px);
+    }
+  }
+
+  .way__methods-alter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .way__alter-single {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 5px 6px;
+    padding-inline-end: 25px;
+    border-radius: 27px;
+    background: #fff;
+    box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      min-width: 30px;
+    }
+
+    span {
+      font-family: var(--dynapuff);
+      font-size: 15px;
+      color: #0d1c34;
+    }
+  }
+
+  .way-bg {
+    position: absolute;
+    bottom: 0px;
+    inset-inline-start: 0px;
+    z-index: -1;
+  }
+}
+
+/* ==== 
+ --------- (5.11) way styles end ---------
+ ==== */

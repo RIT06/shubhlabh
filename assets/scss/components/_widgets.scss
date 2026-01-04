@@ -1,0 +1,265 @@
+/* ==== 
+ --------- (3.06) widgets styles start ---------
+ ==== */
+
+// mixins
+@use "../abstracts/mixins" as *;
+// variables
+@use "../abstracts/variables" as *;
+
+// social
+.social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  a {
+    font-size: 16px;
+    background-color: #e5e5e5;
+    color: #181614;
+    @include box(50px);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: var(--shadow);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: -5px;
+      width: 100%;
+      height: 100%;
+      background-color: var(--quinary-color);
+      z-index: -1;
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: scale(0);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      color: var(--quinary-color);
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+  }
+
+  i {
+    margin: 0px;
+  }
+}
+
+// footer widgets
+
+.footer__widget {
+  h6 {
+    letter-spacing: 1px;
+  }
+}
+
+.footer__widget-list {
+  li {
+    margin-bottom: 16px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// breadcrumb
+.breadcrumb {
+  margin-bottom: 0px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  border-radius: 5px;
+  background: #8ce657;
+
+  .breadcrumb-item,
+  a {
+    color: black;
+    line-height: 1;
+    font-size: 18px;
+    font-family: var(--dynapuff);
+  }
+
+  a {
+    &:hover {
+      color: var(--black);
+    }
+  }
+
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0px;
+    color: var(--black);
+
+    &::before {
+      padding-inline-end: 12px;
+      content: "\ea65";
+      font-family: "tabler-icons";
+      font-weight: 700;
+      color: black;
+      margin-bottom: -2px;
+    }
+  }
+
+  .active {
+    color: var(--black) !important;
+  }
+}
+
+// pagination
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  button,
+  a {
+    @include box(40px);
+    border: 1px solid var(--septenary-color) !important;
+    background-color: var(--quaternary-color);
+    color: var(--black);
+    transition: var(--transition);
+    font-weight: 700;
+    font-size: 16px;
+
+    i {
+      font-size: 20px;
+    }
+
+    &:hover {
+      border-color: var(--quinary-color);
+      background-color: var(--quinary-color);
+      color: var(--black);
+    }
+  }
+
+  .active {
+    border-color: var(--quinary-color);
+    background-color: var(--quinary-color);
+    color: var(--black);
+  }
+
+  button {
+    background-color: var(--quaternary-color);
+    color: var(--septenary-color);
+    border: 1px solid var(--quaternary-color);
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--septenary-color);
+    }
+  }
+}
+
+// blog sidebar widget
+.blog__sidebar-widget {
+  padding: 40px 20px;
+  background-color: #2a662730;
+  border: 1px solid #8ce65740;
+  border-radius: 12px;
+
+  div {
+    line-height: 0;
+  }
+
+  .divider {
+    border-style: dashed;
+    border-color: #8ce65740;
+  }
+
+  form {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-inline: 24px;
+    border: 1px solid #8ce65740;
+    border-radius: 30px;
+
+    input {
+      padding-block: 16px;
+      background-color: transparent;
+      width: 100%;
+    }
+
+    button {
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .single-post {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    row-gap: 12px;
+    max-width: 400px;
+  }
+
+  .thumb {
+    img {
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
+      border-radius: 8px;
+    }
+  }
+
+  .content {
+    a {
+      font-weight: 500;
+      font-size: 18px;
+      max-width: 200px;
+
+      &:hover {
+        color: var(--quaternary-color);
+      }
+    }
+
+    p {
+      &:nth-last-of-type(1) {
+        a {
+          color: var(--primary-color);
+
+          &:hover {
+            color: var(--quaternary-color);
+          }
+        }
+
+        i {
+          font-size: 24px;
+          margin-bottom: -4px;
+        }
+      }
+    }
+  }
+}
+
+/* ==== 
+ --------- (3.06) widgets styles end ---------
+ ==== */

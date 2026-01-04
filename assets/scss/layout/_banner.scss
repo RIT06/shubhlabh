@@ -1,0 +1,446 @@
+/* ==== 
+ --------- (4.02) banner styles start ---------
+ ==== */
+
+// mixins
+@use "../abstracts/mixins" as *;
+// variables
+@use "../abstracts/variables" as *;
+
+// hero section styles
+.hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding-block: 290px 120px;
+  background: linear-gradient(180deg, #f5f4f9 0%, #d1e1ff 100%);
+
+  p {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .btn-wrapper {
+    .btn--primary {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: var(--gorditas);
+    }
+  }
+
+  .left-top-img {
+    position: absolute;
+    z-index: -1;
+    top: 28%;
+    left: 15px;
+
+    img {
+      max-width: 10vw;
+      min-width: 60px;
+      animation: pulseSm 9s linear infinite;
+    }
+  }
+
+  .left-center-img {
+    position: absolute;
+    z-index: -1;
+    top: 70%;
+    transform: translateY(-70%);
+    left: 5%;
+
+    img {
+      max-width: 8vw;
+      min-width: 40px;
+      animation: rotation 9s linear infinite;
+    }
+  }
+
+  .left-bottom-img {
+    position: absolute;
+    z-index: -1;
+    bottom: 10%;
+    left: 80px;
+
+    img {
+      max-width: 8vw;
+      min-width: 40px;
+      animation: moveLeftRight 9s linear infinite;
+    }
+  }
+
+  .right-top-img {
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    right: 14%;
+
+    img {
+      max-width: 12vw;
+      min-width: 40px;
+      animation: moveLeftRight 9s linear infinite;
+    }
+  }
+
+  .right-bottom-img {
+    position: absolute;
+    z-index: -1;
+    bottom: 10%;
+    right: 100px;
+
+    img {
+      max-width: 8vw;
+      min-width: 40px;
+      animation: moveTopBottom 12s linear infinite;
+    }
+  }
+}
+
+// hero two styles
+.hero-two {
+  background: linear-gradient(180deg, #fafffe 0%, #d8fff4 78.02%, #d8fff4 100%);
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+  margin-top: 170px;
+
+  .btn-wrapper .btn--primary {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .hero-two-tab-wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--black);
+      border-radius: 0px;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+      z-index: -1;
+      pointer-events: none;
+      backdrop-filter: blur(2px);
+    }
+
+    .btn-wrapper {
+      width: 100%;
+
+      .btn--primary {
+        font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  .hero-two__tab-inner {
+    padding: 40px 30px;
+    background-color: var(--white);
+
+    margin-right: 15px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px;
+    gap: 12px;
+    border-radius: 40px;
+    border: 1px solid #000;
+    background: #fff;
+
+    li {
+      width: calc(50% - 6px);
+    }
+
+    button {
+      width: 100%;
+      font-size: 18px;
+      font-family: var(--dynapuff);
+      padding: 8px;
+      background-color: var(--white);
+      border-radius: 30px;
+      justify-content: center;
+      color: #0d1c34;
+
+      &:hover {
+        background-color: var(--primary-color);
+      }
+    }
+
+    .active {
+      background-color: var(--primary-color);
+    }
+  }
+
+  .tab-group {
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    background-color: var(--white);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+
+    &:hover {
+      border-color: var(--primary-color);
+    }
+  }
+
+  .tab-group__left {
+    p {
+      color: #9b9eb4;
+      font-family: var(--inter);
+    }
+
+    input {
+      width: 100%;
+      max-width: 100%;
+      border: 0px;
+      font-weight: 500;
+      font-family: var(--inter);
+      color: #0d1c34;
+      padding-block: 12px;
+
+      &::placeholder {
+        color: #0d1c34;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .select {
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px;
+    padding: 0px;
+    padding-inline-end: 16px;
+    font-family: var(--inter);
+
+    &::after {
+      right: unset;
+      inset-inline-end: 0px !important;
+      width: 7px;
+      height: 7px;
+      border-color: #0d1c34;
+      margin-top: -5px;
+    }
+
+    .option,
+    .current {
+      font-size: 15px;
+      line-height: 1;
+      color: #0d1c34;
+    }
+
+    .option {
+      min-height: auto;
+      width: 100%;
+      padding-block: 8px;
+    }
+
+    .current {
+      color: #0d1c34;
+      line-height: 1;
+
+      font-weight: 500;
+    }
+
+    .list {
+      padding: 12px 0px;
+      border-color: #0d1c3450;
+      background-color: var(--white);
+    }
+  }
+
+  .left-img {
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-50%);
+    z-index: -2;
+
+    img {
+      max-width: 12vw;
+      min-width: 60px;
+      animation: rotation 10s linear infinite;
+    }
+  }
+
+  .right-img {
+    position: absolute;
+    bottom: -60px;
+    left: -20%;
+    z-index: -2;
+
+    img {
+      max-width: 12vw;
+      min-width: 60px;
+      animation: rotation 6s linear infinite;
+    }
+  }
+}
+
+// hero three styles
+.hero-three {
+  padding-top: 240px;
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 120px;
+    height: 170px;
+    left: -40px;
+    top: 200px;
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #4ce714 100%);
+    filter: blur(100px);
+  }
+
+  p {
+    max-width: 800px;
+  }
+
+  .hero-three__cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero-three__thumb-wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(113deg, #dbffca 11.44%, #e2c51e 60.27%);
+      border-radius: 50%;
+      z-index: -1;
+      animation: moveLeftRight 7s linear infinite;
+    }
+  }
+
+  .hero-three__thumb {
+    min-width: 580px;
+    padding-inline-start: 40px;
+  }
+
+  .hero-three__bg {
+    position: absolute;
+    left: 50%;
+    top: 160px;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 1500px;
+
+    img {
+      opacity: 0.4;
+    }
+  }
+}
+
+// common banner styles
+.banner {
+  border-bottom: 1px solid #ffffff30;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background: #262524;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    width: 100px;
+    height: 170px;
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #4ce714 100%);
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 164px;
+    height: 164px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #4ce714 100%);
+    filter: blur(94.5px);
+    z-index: -1;
+  }
+
+  .banner-icons {
+    position: absolute;
+    z-index: -1;
+    top: 18px;
+    inset-inline-start: 5%;
+
+    img {
+      max-width: 6vw;
+      min-width: 30px;
+      animation: rotation 4s linear infinite;
+      animation-delay: 0.5s;
+    }
+  }
+
+  .left-bottom-img {
+    top: unset;
+    bottom: 12px;
+    inset-inline-start: 63px;
+
+    img {
+      animation: pulseSm 3s linear infinite;
+      animation-delay: 2s;
+    }
+  }
+
+  .right-top-img {
+    inset-inline-start: unset;
+    inset-inline-end: 70px;
+    top: 38px;
+
+    img {
+      animation: rotation 4s linear infinite;
+    }
+  }
+
+  .right-bottom-img {
+    inset-inline-start: unset;
+    inset-inline-end: 17px;
+    top: unset;
+    bottom: 50px;
+
+    img {
+      animation: moveLeftRight 4s linear infinite;
+    }
+  }
+}
+
+/* ==== 
+ --------- (4.02) banner styles end ---------
+ ==== */

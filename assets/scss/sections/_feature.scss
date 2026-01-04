@@ -1,0 +1,71 @@
+/* ==== 
+ --------- (5.08) feature styles start ---------
+ ==== */
+
+.feature {
+  .feature__single {
+    padding: 40px 30px;
+    border-radius: 5px;
+    border: 2px dashed #ffffff;
+    transition: var(--transition);
+
+    &:hover {
+      transform: rotate(-2.258deg);
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .feature__method {
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535;
+
+    .feature__method-inner {
+      padding: 40px 20px;
+      background: linear-gradient(
+        90deg,
+        #161513 0%,
+        rgba(22, 21, 19, 0) 16.04%,
+        rgba(22, 21, 19, 0) 45.57%,
+        rgba(22, 21, 19, 0.46) 85.65%,
+        rgba(22, 21, 19, 0.71) 92.27%,
+        #161513 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .feature__method-single {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:nth-of-type(even) {
+      background-color: #2a662740;
+    }
+
+    &:nth-of-type(odd) {
+      background-color: #f3e29d25;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.08) feature styles end ---------
+ ==== */

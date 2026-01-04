@@ -1,0 +1,369 @@
+/* ==== 
+ --------- (3.02) forms styles start ---------
+ ==== */
+
+// mixins
+@use "../abstracts/mixins" as *;
+// variables
+@use "../abstracts/variables" as *;
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  .input-single {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 9px 16px;
+    background-color: var(--white);
+    border: 1px solid #707070;
+    color: var(--quaternary-color);
+    transition: var(--transition);
+
+    &:focus {
+      border-color: var(--primary-color);
+    }
+
+    &::placeholder {
+      color: var(--quaternary-color);
+    }
+  }
+
+  textarea {
+    min-height: 300px;
+  }
+}
+
+// profit form
+.profit-form {
+  label {
+    display: block;
+    font-family: var(--gorditas);
+    margin-bottom: 12px;
+  }
+
+  .select,
+  input {
+    background-color: transparent;
+    border: 1px solid #d1d5db90;
+    border-radius: 10px;
+    color: var(--white);
+    width: 100%;
+    padding: 16px 24px;
+
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+
+  .select {
+    background-color: transparent;
+    font-family: var(--inter);
+    float: unset;
+
+    &::after {
+      right: 24px;
+      width: 7px;
+      height: 7px;
+      border-color: var(--white);
+      margin-top: -5px;
+    }
+
+    .current {
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .option {
+      min-height: auto;
+      width: 100%;
+      padding-block: 16px;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .current {
+      color: white;
+      line-height: 1;
+
+      font-weight: 500;
+    }
+
+    .list {
+      padding: 12px 0px;
+      border-color: #0d1c3450;
+      background-color: var(--white);
+      width: 100%;
+    }
+  }
+}
+
+.newsletter-form {
+  form {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-inline: auto;
+    padding: 10px 12px;
+    background-color: var(--white);
+    border-radius: 5px;
+    border: 2px solid #000;
+
+    .input-icon {
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--black);
+
+      &::placeholder {
+        color: var(--black);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: var(--gorditas);
+        font-size: 14px;
+      }
+    }
+
+    button {
+      font-family: var(--gorditas);
+      letter-spacing: 1px;
+      padding-block: 16px !important;
+      border: 0px solid transparent;
+      background-color: var(--white);
+
+      &::before,
+      &::after {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  .btn-wrapper {
+    margin: 0px;
+
+    &::before {
+      content: none;
+    }
+
+    .btn--primary {
+      font-family: var(--gorditas);
+      letter-spacing: 1px;
+      padding-block: 16px !important;
+      border-color: var(--primary-color);
+      background-color: var(--white);
+
+      &::before,
+      &::after {
+        background-color: var(--primary-color);
+      }
+
+      &:hover {
+        border-color: var(--black);
+      }
+    }
+  }
+}
+
+// newsletter two
+.newsletter-two {
+  input {
+    width: 100%;
+    padding-block: 16px;
+    padding-inline-start: 0px;
+    padding-inline-end: 16px;
+    border-radius: 0px;
+    background: transparent;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: var(--oswald);
+    border: 0px;
+    border-bottom: 1px solid #d9d9d9;
+
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+}
+
+.footer__newsletter-check {
+  input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0px;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--white);
+
+    a {
+      color: var(--primary-color);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+
+  label:before {
+    content: "";
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-inline-end: 12px;
+    margin-top: -2px;
+  }
+
+  input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    inset-inline-start: 9px;
+    width: 6px;
+    height: 10px;
+    border: solid var(--primary-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  input:checked + label::before {
+    border-color: var(--primary-color);
+  }
+}
+
+// newsletter three
+.newsletter-three {
+  .input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    .input-icon {
+      flex-grow: 1;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 6px;
+      border: 1.2px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.13);
+      padding: 14px 16px;
+      padding-inline-start: 56px;
+
+      &::placeholder {
+        color: #ffffff70;
+      }
+    }
+  }
+
+  .input-icon {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-46%);
+      font-size: 20px;
+      inset-inline-start: 24px;
+    }
+  }
+
+  button {
+    padding: 16px 30px;
+    border-radius: 6px !important;
+    background: linear-gradient(
+      281deg,
+      #57aa22 -0.51%,
+      #6db425 13.8%,
+      #99c92a 26.72%,
+      #cfd431 43.79%,
+      #dbc731 61.33%,
+      #e3af23 83.48%
+    );
+    min-width: max-content;
+    font-family: var(--inter);
+    color: var(--black);
+    font-weight: 700;
+
+    i {
+      font-size: 20px;
+      margin-bottom: -1px;
+    }
+  }
+}
+
+// contact three form
+.contact-three__form {
+  .input-group {
+    gap: 30px;
+    flex-wrap: wrap;
+
+    .input-single {
+      width: 100%;
+      border-width: 0px;
+    }
+  }
+
+  .input-single {
+    width: 100%;
+
+    input,
+    textarea {
+      background: #32323840;
+      padding-inline: 24px;
+      padding-block: 20px;
+      width: 100%;
+      border-width: 0px;
+      font-family: var(--inter);
+
+      &::placeholder {
+        color: var(--white);
+      }
+    }
+
+    textarea {
+      min-height: 190px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (3.02) forms styles end ---------
+ ==== */

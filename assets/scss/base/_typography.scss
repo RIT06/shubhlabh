@@ -1,0 +1,130 @@
+/* ==== 
+ --------- (2.02) typography styles start ---------
+ ==== */
+
+// variables
+@use "../abstracts/variables" as *;
+
+// paragraph styles
+p,
+th,
+td,
+li,
+input,
+textarea,
+select,
+label,
+blockquote,
+span {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--template-color);
+}
+
+.text-xxl {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.text-xl {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.text-lg {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text-md {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-xs {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+// link styles
+a,
+button {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// heading styles
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.title-xl {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  a,
+  span {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--gorditas);
+}
+
+.neutral-top {
+  margin-block-start: -8px;
+}
+
+/* ==== 
+ --------- (2.02) typography styles end ---------
+ ==== */

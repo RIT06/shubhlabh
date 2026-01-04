@@ -1,0 +1,185 @@
+/* ==== 
+ --------- (5.16) work styles start ---------
+ ==== */
+
+.work {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  .work__thumb-wrapper {
+    direction: rtl;
+
+    .work__thumb {
+      min-width: 60vw;
+      text-align: center;
+
+      &::before {
+        left: 70% !important;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .work__thumb {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 260px;
+      height: 370px;
+      background: linear-gradient(
+        180deg,
+        rgba(24, 255, 158, 0) 0%,
+        #4ce714 100%
+      );
+      filter: blur(100px);
+      z-index: -1;
+    }
+  }
+
+  .work__content {
+    margin-top: 60px;
+    text-align: center;
+
+    p {
+      max-width: 430px;
+      margin-inline: auto;
+    }
+  }
+
+  .left-top-img {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 200px;
+  }
+
+  .left-bottom-img {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 80%;
+    transform: translateY(-80%);
+  }
+
+  .right-top-img {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: -10%;
+  }
+
+  .right-bottom-img {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 20%;
+  }
+}
+
+// work two
+.work-two {
+  .work-two__single {
+    padding: 40px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    p {
+      color: #bec2c7;
+    }
+
+    img {
+      transition: var(--transition);
+      width: 64px;
+      height: 64px;
+    }
+
+    &:hover {
+      border-color: var(--quaternary-color);
+
+      img {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+// story
+.story {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  .story__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+    }
+
+    .story-blue {
+      width: auto;
+      height: auto;
+      border-radius: 0px;
+      backdrop-filter: unset;
+      position: absolute;
+      z-index: -1;
+      bottom: -20px;
+      inset-inline-end: 100px;
+      animation: moveLeftRight 5s linear infinite;
+    }
+
+    .story-green {
+      width: auto;
+      height: auto;
+      border-radius: 0px;
+      backdrop-filter: unset;
+      position: absolute;
+      z-index: -1;
+      bottom: 30%;
+      inset-inline-end: 50%;
+      animation: moveTopBottom 5s linear infinite;
+    }
+  }
+
+  .btn-wrapper .btn--primary {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .left-img {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    z-index: -1;
+
+    img {
+      animation: moveTopBottom 6s linear infinite;
+      max-width: 8vw;
+      min-width: 50px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.16) work styles end ---------
+ ==== */

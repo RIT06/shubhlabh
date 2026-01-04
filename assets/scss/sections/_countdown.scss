@@ -1,0 +1,160 @@
+/* ==== 
+ --------- (5.14) countdonw styles start ---------
+ ==== */
+
+.countdown-main {
+  .countdown__inner {
+    padding: 80px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    background: rgba(15, 11, 29, 0.75);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 670px;
+      height: 170px;
+      background: linear-gradient(
+        180deg,
+        rgba(24, 255, 158, 0) 0%,
+        #4ce714 100%
+      );
+      filter: blur(100px);
+    }
+
+    .bottom-img {
+      position: absolute;
+      z-index: -2;
+      bottom: -190px;
+      right: -100px;
+
+      img {
+        transform: translate(-50%, -50%);
+        animation: pulse 5s linear infinite;
+      }
+    }
+
+    .top-img {
+      position: absolute;
+      z-index: -2;
+      top: 60px;
+      right: 60px;
+
+      img {
+        animation: moveLeftRight 8s linear infinite;
+      }
+    }
+  }
+
+  .time-countdown {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    span {
+      margin-top: 10px;
+      font-size: 20px;
+      display: none;
+    }
+  }
+
+  .counter-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+
+    h4 {
+      font-family: var(--oswald);
+      background: linear-gradient(
+        281deg,
+        #57aa22 -0.51%,
+        #6db425 13.8%,
+        #99c92a 26.72%,
+        #cfd431 43.79%,
+        #dbc731 61.33%,
+        #e3af23 83.48%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    span {
+      font-size: 14px;
+      color: var(--white);
+      margin-top: 0px;
+      display: block;
+    }
+  }
+
+  .progress-count-wrapper {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  .progress-bar {
+    overflow: visible;
+    height: 15px;
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .progress-bar-percent {
+    background: linear-gradient(
+      281deg,
+      #57aa22 -0.51%,
+      #6db425 13.8%,
+      #99c92a 26.72%,
+      #cfd431 43.79%,
+      #dbc731 61.33%,
+      #e3af23 83.48%
+    );
+    height: 100%;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+  }
+
+  .count-progress__goal,
+  .count-progress__intro {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    p,
+    span {
+      color: var(--white);
+      font-weight: 500;
+    }
+  }
+
+  .count-progress__intro {
+    p {
+      letter-spacing: 1px;
+    }
+  }
+
+  .countdown__content {
+    p {
+      max-width: 420px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.14) countdonw styles end ---------
+ ==== */

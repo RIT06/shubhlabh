@@ -1,0 +1,107 @@
+/* ==== 
+ --------- (5.20) invest styles start ---------
+ ==== */
+
+.invest {
+  overflow-x: clip;
+
+  .invest__thumnb-wrapper {
+    direction: rtl;
+    height: 100%;
+  }
+
+  .invest__thumb {
+    height: 100%;
+    position: relative;
+    min-width: 600px;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 370px;
+      height: 270px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        180deg,
+        rgba(24, 255, 158, 0) 0%,
+        #4ce714 100%
+      );
+      filter: blur(100px);
+      z-index: -1;
+    }
+  }
+
+  .invest__thumb-one {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+
+    img {
+      animation: rotateAnimation 10s linear infinite;
+    }
+  }
+
+  .invest__thumb-two {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+
+    img {
+      animation: rotateAnimation 10s linear infinite reverse;
+    }
+  }
+
+  .invest__content {
+    height: 100%;
+  }
+
+  p {
+    max-width: 640px;
+  }
+
+  .invest__list {
+    max-width: 580px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 30px 24px;
+      flex-wrap: wrap;
+
+      li {
+        width: 100%;
+      }
+    }
+
+    a {
+      color: var(--white);
+      font-weight: 700;
+      font-size: inherit;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .divider {
+    border-color: #231e3d;
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* ==== 
+ --------- (5.20) invest styles end ---------
+ ==== */

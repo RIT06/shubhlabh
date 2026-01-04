@@ -1,0 +1,75 @@
+/* ==== 
+ --------- (5.05) pricing styles start ---------
+ ==== */
+
+.pricing {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .pricing__single {
+    padding: 60px 20px;
+    border-radius: 10px;
+    border: 1px dashed #fff;
+    background: #1a1815;
+  }
+
+  h6 {
+    margin-top: -8px;
+  }
+
+  a {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--black);
+
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-weight: 700;
+    margin-bottom: 16px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+
+    i {
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to left, #06766e50, #20ba8b40);
+    }
+  }
+
+  .pricing__thumb {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    img {
+      max-width: 50vw;
+      min-width: 160px;
+      animation: moveLeftRight 8s linear infinite;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.05) pricing styles end ---------
+ ==== */

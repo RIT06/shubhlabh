@@ -1,0 +1,87 @@
+/* ==== 
+ --------- (5.15) counter styles start ---------
+ ==== */
+
+.counter {
+  .counter__single {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .thumb {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    i {
+      font-size: 30px;
+      color: var(--primary-color);
+    }
+  }
+
+  h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .odometer-digit {
+    width: 18px;
+  }
+}
+
+// counter two
+.counter-two {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  .counter-two__single {
+    text-align: center;
+  }
+
+  h2 {
+    color: #fcd535;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #fff;
+    font-size: 90px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--dynapuff);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: -15px;
+  }
+
+  .odometer-digit {
+    width: auto;
+  }
+
+  .right-img {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    z-index: -1;
+
+    img {
+      animation: moveTopBottom 6s linear infinite;
+      max-width: 8vw;
+      min-width: 50px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.15) counter styles end ---------
+ ==== */

@@ -1,0 +1,249 @@
+/* ==== 
+ --------- (5.19) token styles start ---------
+ ==== */
+
+.tokenomics {
+  overflow-x: clip;
+  position: relative;
+  z-index: 1;
+
+  .tokenomics__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tokenomics__single {
+    max-width: 160px;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+  }
+
+  .content-inner {
+    li {
+      font-size: 20px;
+      margin-bottom: 8px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .date {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    margin-inline: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      281deg,
+      #57aa22 -0.51%,
+      #6db425 13.8%,
+      #99c92a 26.72%,
+      #cfd431 43.79%,
+      #dbc731 61.33%,
+      #e3af23 83.48%
+    );
+    border-radius: 50%;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 185px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(
+        180deg,
+        rgba(24, 255, 158, 0) 0%,
+        #4ce714 100%
+      );
+      filter: blur(100px);
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 60px;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 50px;
+      background-color: #c6e757;
+      z-index: -1;
+    }
+  }
+
+  .tokenomics__single-alt {
+    flex-direction: column-reverse;
+  }
+
+  .tokenomics__inner {
+    position: relative;
+    z-index: 1;
+
+    .shape {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1650px;
+      min-width: 1650px;
+      z-index: -1;
+      display: none;
+
+      img {
+        width: 100%;
+        transform: rotate(2deg);
+      }
+    }
+  }
+}
+
+// token overview
+.token-overview {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 207px;
+    height: 260px;
+    bottom: -200px;
+    left: 0px;
+    background: linear-gradient(180deg, #323624 0%, #6c8617 100%);
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 260px;
+    bottom: 20px;
+    right: -100px;
+    background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #7c9c10 100%);
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  .token-overview__thumb {
+    img {
+      min-height: 400px;
+      object-position: center;
+    }
+  }
+
+  .left-thumb {
+    position: absolute;
+    top: 20%;
+    left: 0px;
+
+    img {
+      max-width: 20vw;
+      min-width: 100px;
+      animation: moveTopBottom 5s linear infinite;
+    }
+  }
+}
+
+// token two styles
+.token-two {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  .token-two__inner {
+    padding-inline: 20px;
+    border: 1px dashed #fff;
+    background: #161513;
+  }
+
+  .token-two__thumb {
+    img {
+      animation: moveTopBottom 6s linear infinite;
+    }
+  }
+
+  .token-two__content {
+    max-width: 640px;
+  }
+
+  h3 {
+    background: linear-gradient(91deg, #43dafc 1.16%, #ed9e4f 105.69%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .copy-t {
+    padding: 16px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    i {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    span {
+      width: 1px;
+      height: 22px;
+      background: #d9d9d9;
+    }
+  }
+
+  .img-one {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: -1;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveLeftRight 10s linear infinite;
+    }
+  }
+
+  .img-two {
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    z-index: -1;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveTopBottom 5s linear infinite;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.19) token styles end ---------
+ ==== */

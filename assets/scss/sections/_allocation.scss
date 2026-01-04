@@ -1,0 +1,88 @@
+/* ==== 
+ --------- (5.17) allocation styles start ---------
+ ==== */
+
+.allocation {
+  position: relative;
+  z-index: 2;
+  background-color: #171520;
+  overflow-x: clip;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .allocation-tab-btn {
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      inset-inline: 0px;
+      width: 0%;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      color: var(--primary-color);
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  .active {
+    color: var(--primary-color);
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  p {
+    max-width: 470px;
+  }
+
+  .allocation__thumb {
+    min-width: 890px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 270px;
+      height: 370px;
+      opacity: 0.5;
+      background: linear-gradient(
+        180deg,
+        rgba(24, 255, 158, 0) 0%,
+        #4ce714 100%
+      );
+      filter: blur(100px);
+      z-index: -1;
+    }
+
+    img {
+      position: relative;
+      inset-inline-start: -80px;
+      z-index: -1;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.17) allocation styles end ---------
+ ==== */

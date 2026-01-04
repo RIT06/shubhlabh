@@ -1,0 +1,85 @@
+/* ==== 
+ --------- (5.26) terms styles start ---------
+ ==== */
+
+.terms {
+  .terms__tab {
+    padding: 60px 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+
+    li {
+      margin-bottom: 10px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+    }
+
+    button {
+      font-family: var(--oswald);
+      color: #696a6e;
+      padding: 16px 20px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset-block: 0px;
+        inset-inline-start: 0px;
+        width: 4px;
+        height: 100%;
+
+        border-start-start-radius: 12px;
+        border-end-start-radius: 12px;
+      }
+
+      &:hover {
+        color: var(--septenary-color);
+      }
+    }
+
+    .active {
+      border-color: #f2f3f4;
+      color: var(--septenary-color);
+
+      &::before {
+        background-color: var(--quinary-color);
+      }
+    }
+  }
+
+  .terms-group {
+    p {
+      color: #4f545a;
+      margin-bottom: 25px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+    }
+
+    ul {
+      margin-block: 40px;
+      list-style-type: disc;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: var(--septenary-color);
+      font-family: var(--gorditas);
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.26) terms styles end ---------
+ ==== */

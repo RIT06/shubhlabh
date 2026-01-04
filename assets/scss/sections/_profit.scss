@@ -1,0 +1,83 @@
+/* ==== 
+ --------- (5.04) profit styles start ---------
+ ==== */
+
+.profit {
+  .profit__thumb {
+    position: relative;
+  }
+
+  .img-one {
+    position: absolute;
+    top: 80%;
+    left: 100px;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveTopBottom 7s linear infinite;
+    }
+  }
+
+  .img-two {
+    position: absolute;
+    top: -50px;
+    right: 100px;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveLeftRight 12s linear infinite;
+    }
+  }
+
+  .img-three {
+    position: absolute;
+    bottom: 50px;
+    right: 160px;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: rotation 12s linear infinite;
+    }
+  }
+
+  form {
+    padding: 60px 20px;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.03);
+    position: relative;
+    z-index: 1;
+  }
+
+  .img-four {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveTopBottom 5s linear infinite;
+    }
+  }
+
+  .img-five {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    z-index: -1;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveLeftRight 5s linear infinite;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.04) profit styles end ---------
+ ==== */

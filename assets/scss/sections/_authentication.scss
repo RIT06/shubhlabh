@@ -1,0 +1,136 @@
+/* ==== 
+ --------- (5.01) authentication styles start ---------
+ ==== */
+
+.authentication {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .authentication__wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      z-index: -1;
+      border-radius: 0px;
+      border: 1px solid #000;
+      background: #fcd535;
+      box-shadow: 0px 15px 10px 0px rgba(242, 242, 242, 0.18);
+    }
+  }
+
+  .authentication__inner {
+    padding: 60px 20px;
+    background-color: var(--white);
+  }
+
+  input {
+    width: 100%;
+    padding: 24px;
+    background-color: var(--white);
+    border: 1px solid #ecedeb;
+    color: var(--septenary-color);
+    font-family: var(--oswald);
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 10px;
+
+    &::placeholder {
+      color: #6b7280;
+    }
+  }
+
+  .footer__newsletter-check label,
+  p {
+    color: #6b7280;
+
+    a {
+      color: var(--septenary-color);
+
+      &:hover {
+        color: var(--quinary-color);
+      }
+    }
+  }
+
+  .footer__newsletter-check label:before {
+    border-color: #d9d9e4;
+  }
+
+  .footer__newsletter-check input:checked + label:before {
+    border-color: var(--septenary-color);
+  }
+
+  .footer__newsletter-check input:checked + label:after {
+    border-color: var(--septenary-color);
+  }
+
+  .btn-wrapper,
+  .btn--primary {
+    width: 100%;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .img-one {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveTopBottom 7s linear infinite;
+    }
+  }
+
+  .img-two {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: moveLeftRight 12s linear infinite;
+    }
+  }
+
+  .img-three {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+
+    img {
+      max-width: 12vw;
+      min-width: 30px;
+      animation: rotation 12s linear infinite;
+    }
+  }
+
+  .group-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+      font-weight: 500;
+      color: #fd2222;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.01) authentication styles end ---------
+ ==== */

@@ -1,0 +1,97 @@
+/* ==== 
+ --------- (5.09) market styles start ---------
+ ==== */
+
+.market {
+  background: linear-gradient(180deg, #f5f4f9 0%, #fff6cc 100%);
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+
+  .market__btns {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 24px;
+      color: #0d1c34;
+      font-family: var(--gorditas);
+      background-color: var(--white);
+      border: 1px solid var(--black);
+      border-radius: 30px;
+
+      &:hover {
+        background-color: #fcd535;
+      }
+    }
+
+    .active {
+      background-color: #fcd535;
+    }
+  }
+
+  .market__single {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--template-bg);
+    border-radius: 6px;
+
+    img {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+    }
+  }
+
+  hr {
+    border-color: #ffffff20;
+    margin: 20px 0px;
+  }
+
+  .text-sm {
+    color: #00c23a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+
+    i {
+      font-size: 18px;
+      padding-top: 5px;
+    }
+  }
+
+  .left-top-img {
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    z-index: -1;
+
+    img {
+      animation: moveTopBottom 6s linear infinite;
+      max-width: 10vw;
+      min-width: 50px;
+    }
+  }
+
+  .bottom-img {
+    position: absolute;
+    right: 90px;
+    bottom: 30px;
+    z-index: -1;
+
+    img {
+      animation: pulse 6s linear infinite;
+      max-width: 8vw;
+      min-width: 50px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.09) market styles end ---------
+ ==== */

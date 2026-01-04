@@ -1,0 +1,166 @@
+/* ==== 
+ --------- (3.04) custom cursor styles start ---------
+ ==== */
+
+// mixins
+@use "../abstracts/mixins" as *;
+// variables
+@use "../abstracts/variables" as *;
+
+.a-cursor {
+  .cursor-outer {
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c9f31d;
+    box-sizing: border-box;
+    z-index: 10000000;
+    opacity: 1;
+    transition: all 0.43s ease-out 0s;
+    mix-blend-mode: difference;
+
+    &.cursor-hover {
+      margin-left: -20px;
+      margin-top: -20px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary-color);
+      mix-blend-mode: difference;
+      opacity: 1;
+    }
+
+    &.cursor-big {
+      width: 160px;
+      height: 160px;
+      margin-left: -80px;
+      margin-top: -80px;
+      background-color: var(--template-color);
+      mix-blend-mode: difference;
+    }
+
+    &.cursor-big.drag-cursor {
+      opacity: 1;
+      cursor: auto !important;
+    }
+
+    &.cursor-big.view-cursor {
+      opacity: 1;
+    }
+
+    &.cursor-hover.drag-cursor {
+      opacity: 1;
+    }
+
+    &.cursor-hover.view-cursor {
+      opacity: 1;
+    }
+
+    &.drag-cursor {
+      opacity: 0;
+    }
+
+    &.view-cursor {
+      opacity: 0;
+    }
+
+    &.not-cursor-outer {
+      opacity: 0;
+    }
+  }
+
+  .mouseCursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translateZ(0);
+    visibility: hidden;
+    text-align: center;
+  }
+
+  .cursor-inner {
+    margin-left: -5px;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    z-index: 10000001;
+    background-color: #c9f31d;
+    opacity: 1;
+    transition: all 0.26s ease-out 0s;
+    mix-blend-mode: difference;
+
+    &.cursor-big {
+      opacity: 0;
+    }
+
+    &.cursor-hover {
+      opacity: 0;
+    }
+
+    span {
+      @include box(160px);
+      flex-direction: column;
+      gap: 4px;
+      margin-left: -80px;
+      margin-top: -80px;
+      background-color: #c9f31d;
+      color: var(--secondary-color);
+      line-height: 1;
+      opacity: 0;
+      transform: scale(0);
+      text-transform: uppercase;
+      transition: all 0.4s ease-out 0s;
+      letter-spacing: 1px;
+      mix-blend-mode: normal !important;
+      text-align: center;
+
+      i {
+        font-size: 24px;
+        margin-bottom: -8px;
+      }
+    }
+
+    &.view-cursor {
+      margin-top: -60px;
+    }
+
+    &.not-cursor-outer {
+      opacity: 0;
+    }
+  }
+
+  .draggable-cursor {
+    cursor: grab !important;
+  }
+
+  .viewable-cursor {
+    cursor: pointer !important;
+  }
+
+  .drag-cursor {
+    .drag {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .view-cursor {
+    .view {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .cursor-none .cursor-inner,
+  .cursor-none .cursor-outer {
+    opacity: 0;
+  }
+}
+
+/* ==== 
+ --------- (3.04) custom cursor styles end ---------
+ ==== */
