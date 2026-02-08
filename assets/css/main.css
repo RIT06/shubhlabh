@@ -6162,6 +6162,25 @@ span {
   border-color: rgba(255, 255, 255, 0.13);
 }
 
+.service-video-card {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+
 .work-two .work-two__single:hover img {
   transform: rotateY(180deg);
 }
@@ -6309,6 +6328,7 @@ span {
   filter: blur(100px);
   z-index: -1;
 }
+
 .allocation .allocation__thumb img {
   position: relative;
   inset-inline-start: -80px;
@@ -6325,6 +6345,7 @@ span {
   position: relative;
   z-index: 1;
 }
+
 .distribution::after {
   content: "";
   position: absolute;
@@ -6352,6 +6373,7 @@ span {
   position: relative;
   z-index: 1;
 }
+
 .distribution .distribution__inner::before {
   content: "";
   position: absolute;
@@ -6363,9 +6385,11 @@ span {
   background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #4ce714 100%);
   filter: blur(100px);
 }
+
 .distribution .chart-wrapper {
   position: relative;
 }
+
 .distribution .chart-wrapper .ch {
   position: absolute;
   top: 50%;
@@ -7860,28 +7884,25 @@ span {
  --------- (5.27) coming soon section styles end ---------
  ==== */
 
-.service-video-card {
+/* .service-video-card {
   position: relative;
   height: 100%;
   min-height: 350px;
-  /* 🔥 card height fix */
   overflow: hidden;
   border-radius: 16px;
-}
+} */
 
-.service-video-card video {
+/* .service-video-card video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* full cover */
   object-position: center;
-  /* 🔥 CENTER CROP FIX */
   z-index: 1;
-}
+} */
 
-.service-video-card::after {
+/* .service-video-card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -7890,9 +7911,9 @@ span {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.1));
   z-index: 2;
-}
+} */
 
-.service-video-card .video-content {
+/* .service-video-card .video-content {
   position: relative;
   z-index: 3;
   height: 100%;
@@ -7901,4 +7922,33 @@ span {
   justify-content: flex-end;
   padding: 30px;
   color: #fff;
+} */
+
+
+.service-video-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* wrapper full size */
+.video-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* iframe full cover */
+.video-wrapper iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* click disable */
 }
