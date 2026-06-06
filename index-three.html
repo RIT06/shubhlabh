@@ -213,6 +213,61 @@
       </div>
       <div class="mobile-menu__backdrop"></div>
       <!-- ==== / mobile menu end ==== -->
+      <!-- ==== live crypto chart section start ==== -->
+      <div class="container mt-top-fix mb-20" id="live-crypto-widget-container">
+         <div class="row">
+            <div class="col-12">
+               <div class="live-crypto-widget" style="background: rgba(30, 27, 57, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 24px; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                  
+                  <!-- Widget Header -->
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                     <!-- Selector Tabs -->
+                     <div class="chart-coin-tabs d-flex gap-2">
+                        <button class="coin-tab-btn active" data-symbol="BTC" style="background: #FCD535; border: none; border-radius: 8px; padding: 8px 16px; font-weight: 700; color: #1e1b39; transition: all 0.3s ease;">BTC</button>
+                        <button class="coin-tab-btn" data-symbol="ETH" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 16px; font-weight: 700; color: #fff; transition: all 0.3s ease;">ETH</button>
+                        <button class="coin-tab-btn" data-symbol="SOL" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 16px; font-weight: 700; color: #fff; transition: all 0.3s ease;">SOL</button>
+                     </div>
+                     
+                     <!-- Stats Display -->
+                     <div class="d-flex flex-wrap gap-4 text-white align-items-center">
+                        <div>
+                           <span style="font-size: 13px; color: rgba(255,255,255,0.5); display: block;">Live Price</span>
+                           <h4 id="widget-live-price" class="fw-7 mb-0" style="color: #fff; font-family: 'Gorditas', sans-serif;">$--.--</h4>
+                        </div>
+                        <div>
+                           <span style="font-size: 13px; color: rgba(255,255,255,0.5); display: block;">24h Change</span>
+                           <h5 id="widget-price-change" class="fw-6 mb-0" style="color: #fff;">--%</h5>
+                        </div>
+                        <div>
+                           <span style="font-size: 13px; color: rgba(255,255,255,0.5); display: block;">24h High</span>
+                           <h5 id="widget-price-high" class="fw-6 mb-0" style="color: rgba(255,255,255,0.8);">$--.--</h5>
+                        </div>
+                        <div>
+                           <span style="font-size: 13px; color: rgba(255,255,255,0.5); display: block;">24h Low</span>
+                           <h5 id="widget-price-low" class="fw-6 mb-0" style="color: rgba(255,255,255,0.8);">$--.--</h5>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Chart Container -->
+                  <div class="position-relative" style="min-height: 250px;">
+                     <!-- Spinner Loader -->
+                     <div id="chart-loader" class="position-absolute top-50 start-50 translate-middle text-center" style="display: none; z-index: 10;">
+                        <div class="spinner-border text-warning" role="status">
+                           <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="text-white-50 mt-2">Loading live market data...</p>
+                     </div>
+                     
+                     <!-- Apex Chart Render Target -->
+                     <div id="live-crypto-chart"></div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ==== / live crypto chart section end ==== -->
       <!-- ==== hero section start ==== -->
       <section class="hero-three pb-120" id="hero-section">
          <div class="container">
@@ -1286,7 +1341,7 @@
                   </div>
                </div>
             </div>
-            <div class="row gutter-24">
+            <div class="row gutter-24 gy-4">
                <!-- <div class="col-12 col-md-6 col-xl-4">
                      <div data-aos="fade-up" data-aos-duration="800">
                         <div class="work-two__single van-tilt">
@@ -1333,27 +1388,19 @@
                   </div>
                </div> -->
 
-
-
-
-
-               <div class="col-12 col-md-12 col-xl-4">
-                  <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                     <div class="work-two__single van-tilt">
+               <div class="col-12 col-md-6 h-100">
+                  <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" class="h-100">
+                     <div class="work-two__single van-tilt h-100">
                         <div class="thumb">
                            <img src="assets/images/crypto/flat.png" alt="Image">
                         </div>
                         <div class="content mt-30">
                            <h5 class="fw-6">1.create a Phantom or solflare wallet</h5>
-                           <!-- <p class="text-lg mt-20">Begin your financial evolution with BitGold Bullion's
-                              groundbreaking savings model, a gateway to enhanced
-                              earnings and expansive customer reach. Progress
-                           </p> -->
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-12 col-md-6 col-xl-4 h-100">
+               <div class="col-12 col-md-6 h-100">
                   <div data-aos="fade-up" data-aos-duration="800" class="h-100">
                      <div class="work-two__single van-tilt h-100">
                         <div class="thumb">
@@ -1361,15 +1408,11 @@
                         </div>
                         <div class="content mt-30">
                            <h5 class="fw-6">2.purchase shubhlabh and send it your wallet</h5>
-                           <!-- <p class="text-lg mt-20">Begin your financial evolution with BitGold Bullion's
-                              groundbreaking savings model, a gateway to enhanced
-                              earnings and expansive customer reach. Progress
-                           </p> -->
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-12 col-md-6 col-xl-4 h-100">
+               <div class="col-12 col-md-6 h-100">
                   <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" class="h-100">
                      <div class="work-two__single van-tilt h-100">
                         <div class="thumb">
@@ -1377,26 +1420,18 @@
                         </div>
                         <div class="content mt-30">
                            <h5 class="fw-6">3.Connect it to Raydium or Jupiter</h5>
-                           <!-- <p class="text-lg mt-20">Begin your financial evolution with BitGold Bullion's
-                              groundbreaking savings model, a gateway to enhanced
-                              earnings and expansive customer reach. Progress
-                           </p> -->
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-12 col-md-6 col-xl-4">
-                  <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                     <div class="work-two__single van-tilt">
+               <div class="col-12 col-md-6 h-100">
+                  <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" class="h-100">
+                     <div class="work-two__single van-tilt h-100">
                         <div class="thumb">
                            <img src="assets/images/crypto/market.png" alt="Image">
                         </div>
                         <div class="content mt-30">
                            <h5 class="fw-6">4.Swap SOLANA for shubhlabh coin</h5>
-                           <!-- <p class="text-lg mt-20">Begin your financial evolution with BitGold Bullion's
-                              groundbreaking savings model, a gateway to enhanced
-                              earnings and expansive customer reach. Progress
-                           </p> -->
                         </div>
                      </div>
                   </div>
@@ -2065,6 +2100,8 @@
    <!-- gsap js -->
    <script src="assets/js/gsap.min.js"></script>
    <!-- ==== / js dependencies end ==== -->
+   <!-- crypto live js -->
+   <script src="assets/js/crypto-live.js"></script>
    <!-- main js -->
    <script src="assets/js/custom.js"></script>
 </body>
